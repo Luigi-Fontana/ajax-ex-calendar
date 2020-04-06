@@ -7,10 +7,11 @@
 }
 
 #calendar li,
-#nome-mese {
+#month-name {
     text-transform: capitalize;
 }
 
-.festivo {
+.holiday {
     color: red;
+    font-weight: bold;
 }
