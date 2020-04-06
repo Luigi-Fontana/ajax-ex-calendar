@@ -12,21 +12,31 @@
     <body>
         <div class="container">
             <div class="top-calendar">
-                <h1><span id="month-name">Gennaio</span> 2018</h1>
+                <h1>Calendario 2018</h1>
+                <h2 id="month-name">Gennaio</h2>
                 <div class="top-navigation">
-                    <button class="btn-navigation btn-prev"><< Mese precedente</button>
+                    <button class="btn-navigation btn-prev" disabled><< Mese precedente</button>
                     <button class="btn-navigation btn-next">Mese successivo >></button>
                 </div>
             </div>
             <div class="main-calendar">
-                <ul id="calendar">
+                <div class="weekdays">
+                    <div class="weekdays-calendar">Lunedì</div>
+                    <div class="weekdays-calendar">Martedì</div>
+                    <div class="weekdays-calendar">Mercoledì</div>
+                    <div class="weekdays-calendar">Givoedì</div>
+                    <div class="weekdays-calendar">Venerdì</div>
+                    <div class="weekdays-calendar">Sabato</div>
+                    <div class="weekdays-calendar">Domenica</div>
+                </div>
+                <div class="days-calendar">
 
-                </ul>
+                </div>
             </div>
         </div>
 
         <script id="calendar-template" type="text/x-handlebars-template">
-            <li data-day="{{dataDay}}"> {{day}} </li>
+            <div class="cont-calendar" data-day="{{dataDay}}"> {{day}} </div>
         </script>
 
 

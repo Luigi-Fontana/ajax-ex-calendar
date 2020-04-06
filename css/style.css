@@ -1,17 +1,76 @@
-.top-calendar,
-.main-calendar {
+.container {
+    width: 100vw;
+    height: 100vh;
+}
+
+.top-calendar {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
-#calendar li,
-#month-name {
-    text-transform: capitalize;
+h1 {
+    font-size: 40px;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 30px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+.btn-navigation {
+    padding: 5px 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: darkblue;
+    color: white;
+    cursor: pointer;
+}
+
+.btn-navigation:disabled{
+    background-color: grey;
+    cursor: not-allowed;
+}
+
+.main-calendar {
+    width: 60%;
+    height: 60%;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.weekdays {
+    display: flex;
+    width: 100%;
+    height: calc(100% / 6);
+}
+
+.weekdays-calendar {
+    width: calc(100% / 7);
+    height: 100%;
+}
+
+.days-calendar {
+    width: 100%;
+    height: calc(100% / 6 * 5);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cont-calendar {
+    width: calc(100% / 7);
+    height: calc(100% / 5);
 }
 
 .holiday {
     color: red;
     font-weight: bold;
+}
+
+.holiday-name {
+    font-size: 10px;
 }

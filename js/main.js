@@ -38,18 +38,18 @@ $(document).ready(function () {
     });
 
     function printCalendar(inputDate) {
-        $('#calendar').empty(); // Prima di tutto cancelliamo il contenuto del calendario
+        $('.days-calendar').empty(); // Prima di tutto cancelliamo il contenuto del calendario
         var standardDate = inputDate.clone(); // Cloniamo la data presa da input per manipolarla in seguito
         var inputDays = inputDate.daysInMonth(); // Giorni nel mese corrente
         var inputMonth = inputDate.format('MMMM'); // Prendiamo il nome del mese
         $('#month-name').text(inputMonth); // Aggiorniamo il nome del mese in top calendar
         for (var i = 1; i <= inputDays; i++) { // Ciclo su ogni giorno del mese
             var outputDay = {
-                day: i + ' ' + inputMonth,
+                day: i,
                 dataDay: standardDate.format('YYYY-MM-DD')
             }
             var htmlCalendar = templateCalendar(outputDay); // Popolamento Template Handlebars
-            $('#calendar').append(htmlCalendar); // Append per ogni singolo giorno del mese
+            $('.days-calendar').append(htmlCalendar); // Append per ogni singolo giorno del mese
             standardDate.add(1, 'day'); // Aggiunta di 1 giorno al ciclo
         }
     }
@@ -68,7 +68,7 @@ $(document).ready(function () {
                     var holiday = holidays[i];
                     var holidayName = holiday.name;
                     var holidayDate = holiday.date;
-                    $('#calendar li[data-day="' + holidayDate + '"]').addClass('holiday').append(' - ' + holidayName); // Aggiunta del data-day e della classe holiday
+                    $('.cont-calendar[data-day="' + holidayDate + '"]').addClass('holiday').append('<p class="holiday-name">' + holidayName + '</p>'); // Aggiunta del data-day e della classe holiday
                 }
             }
         });
