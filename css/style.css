@@ -63,12 +63,13 @@ h2 {
 
 .cont-calendar {
     width: calc(100% / 7);
-    height: calc(100% / 5);
+    height: calc(100% / 7);
+    font-size: 20px;
+    font-weight: bold;
 }
 
 .holiday {
     color: red;
-    font-weight: bold;
 }
 
 .holiday-name {

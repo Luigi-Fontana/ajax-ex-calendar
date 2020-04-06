@@ -42,6 +42,11 @@ $(document).ready(function () {
         var standardDate = inputDate.clone(); // Cloniamo la data presa da input per manipolarla in seguito
         var inputDays = inputDate.daysInMonth(); // Giorni nel mese corrente
         var inputMonth = inputDate.format('MMMM'); // Prendiamo il nome del mese
+        var inputWeekDay = inputDate.isoWeekday();
+        console.log(inputWeekDay);
+        for (var x = 1; x < inputWeekDay; x++) {
+            $('.days-calendar').append('<div class="cont-calendar"></div>');
+        }
         $('#month-name').text(inputMonth); // Aggiorniamo il nome del mese in top calendar
         for (var i = 1; i <= inputDays; i++) { // Ciclo su ogni giorno del mese
             var outputDay = {
